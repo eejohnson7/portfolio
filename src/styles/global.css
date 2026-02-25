@@ -1,13 +1,6 @@
 @font-face {
-  font-family: "VIENTO";
-  src: url("../assets/fonts/viento/VIENTO.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "casual_sunday";
-  src: url("../assets/fonts/casual_sunday/casual_sunday.otf") format("woff2");
+  src: url("../assets/fonts/casual_sunday.otf") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
