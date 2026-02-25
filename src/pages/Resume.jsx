@@ -82,7 +82,6 @@ function Resume() {
             <Typography>Open to relocation in EU/UK</Typography>
             <Typography>eejohnson322@gmail.com</Typography>
             <Typography>+1‑318‑381‑0587</Typography>
-            <Typography>LinkedIn</Typography>
           </Box>
 
           <Divider />
@@ -121,19 +120,19 @@ function Resume() {
             <Typography sx={{ fontWeight: 600, marginTop: "0.5rem" }}>
               Programming Languages
             </Typography>
-            <Typography>Python, Java, JavaScript/TypeScript, SQL, C#, React.js</Typography>
+            <Typography>Python, Java, JavaScript/TypeScript, SQL</Typography>
 
             <Typography sx={{ fontWeight: 600, marginTop: "0.5rem" }}>
               Backend & Services
             </Typography>
             <Typography>
-              Node.js, Express, Spring Boot, REST APIs, GraphQL, Microservices, JUnit
+              Node.js, Express, Spring Boot, REST APIs, GraphQL, Microservices, JUnit, Gradle, Hibernate
             </Typography>
 
             <Typography sx={{ fontWeight: 600, marginTop: "0.5rem" }}>
               Frontend & UI
             </Typography>
-            <Typography>React.js, TypeScript, Material UI, Bootstrap</Typography>
+            <Typography>React, Material UI, Bootstrap, HTML, CSS</Typography>
 
             <Typography sx={{ fontWeight: 600, marginTop: "0.5rem" }}>
               Distributed Systems & Data Pipelines
@@ -146,7 +145,7 @@ function Resume() {
               Cloud & DevOps
             </Typography>
             <Typography>
-              Azure, AWS (EC2/S3), Docker, CI/CD (Azure Pipelines, Harness, GitHub Actions)
+              AWS (EC2/S3), Docker, CI/CD (Azure Pipelines, Harness, GitHub Actions)
             </Typography>
 
             <Typography sx={{ fontWeight: 600, marginTop: "0.5rem" }}>
@@ -159,7 +158,7 @@ function Resume() {
             <Typography sx={{ fontWeight: 600, marginTop: "0.5rem" }}>
               Databases
             </Typography>
-            <Typography>MySQL, MongoDB, DynamoDB, Firebase, Snowflake</Typography>
+            <Typography>MySQL, MongoDB, DynamoDB, Firebase, Snowflake, XML (schema & data modeling)</Typography>
           </Box>
 
           <Divider />
