@@ -48,16 +48,20 @@ function About() {
           My Path
         </Typography>
         <Typography sx={{ lineHeight: 1.7 }}>
-          I started my engineering career at Covetrus, where I worked across 
-          React, Node.js, Java, and distributed data systems. Over three years, 
-          I delivered production features end‑to‑end, modernized backend 
-          architectures, and built real‑time analytics pipelines powering 
-          financial workflows used across the company.
+          I got into programming in high school through C++ and CAD, and it just made sense to me. Even when I 
+          kept switching majors in college, I always ended up taking programming classes for fun. By my third year I 
+          finally switched into computer science and finished the degree in two years.
         </Typography>
         <Typography sx={{ lineHeight: 1.7, marginTop: "1rem" }}>
-          I’m drawn to roles where clarity, structure, and impact matter — 
-          whether that’s designing a stable backend service, improving developer 
-          workflows, or creating documentation that helps teams move faster.
+          I started my career at Covetrus as an intern and came back after graduation as a full time engineer. I worked 
+          across the stack and in the data engineering space using React, Node.js, Java, Python, and distributed data systems. 
+          My work included full stack features, backend cleanup and modernization, and real time analytics pipelines.
+        </Typography>
+        <Typography sx={{ lineHeight: 1.7, marginTop: "1rem" }}>
+          Over three years I shipped production features from start to finish, improved backend reliability, and built data 
+          pipelines that supported financial workflows across the company. I like working on systems that need clarity, 
+          structure, and thoughtful engineering, and I enjoy the mix of technical depth, documentation, and collaboration 
+          that comes with that kind of work.
         </Typography>
       </Box>
 
@@ -99,10 +103,14 @@ function About() {
           Outside of Work
         </Typography>
         <Typography sx={{ lineHeight: 1.7 }}>
-          I’m based in Chicago and open to relocating to the EU or UK. 
-          I love music research, editorial design, and building small, 
-          intentional digital projects. I’m also a fan of crime shows, 
-          psychological thrillers, and exploring new cities.
+          I grew up in a small town in Louisiana and have been based in Chicago since March 2025. After my last role ended, 
+          I spent some time in Paris before coming back to Chicago, where I now run a small pet‑sitting business called 
+          Le Minou. It’s a calm, grounding project that lets me stay connected to the things I care about: routine, care, 
+          and creating a sense of home for people and their pets.
+        </Typography>
+        <Typography sx={{ lineHeight: 1.7, marginTop: "1rem" }}>
+          Outside of engineering, I love music research, editorial design, and building small, intentional digital projects. 
+          I’m also a big fan of crime shows, psychological thrillers, and exploring new cities whenever I get the chance.
         </Typography>
       </Box>
     </Box>
