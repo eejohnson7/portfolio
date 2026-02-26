@@ -1,5 +1,5 @@
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Typography } from "@mui/material";
 
 export default function CaseStudies() {
   const items = [
@@ -27,9 +27,16 @@ export default function CaseStudies() {
 
   return (
     <div style={{ maxWidth: "760px", margin: "0 auto", padding: "2rem 1.5rem" }}>
-      <h1 style={{ fontSize: "4rem", marginBottom: "1.5rem", fontFamily: "casual_sunday" }}>Case Studies</h1>
+        <Typography
+          sx={{
+            color: "#980061",
+            fontSize: "2.75rem",
+          }}
+        >
+          Case Studies
+        </Typography>
 
-      <p style={{ marginBottom: "2.75rem", lineHeight: "1.6"}}>
+      <p style={{ marginBottom: "2.75rem", lineHeight: "1.6", fontSize: "1.5rem"}}>
         A set of short, structured walkthroughs of problems I’ve solved in production
         systems. Each case study is presented as a folder you can open.
       </p>
@@ -76,10 +83,10 @@ export default function CaseStudies() {
               </div>
 
               <div style={{ marginTop: "1rem" }}>
-                <p style={{ fontWeight: 500, marginBottom: "0.5rem" }}>
+                <p style={{ marginBottom: "0.5rem", fontSize: "1.5rem" }}>
                   {item.title}
                 </p>
-                <p style={{ opacity: 0.7, fontSize: "0.9rem", lineHeight: "1.4" }}>
+                <p style={{ opacity: 0.7, fontSize: "1.5rem", lineHeight: "1.4" }}>
                   {item.description}
                 </p>
               </div>

@@ -1,9 +1,18 @@
+import { Typography } from "@mui/material";
+
 export default function CodeSamples() {
   return (
     <div style={{ maxWidth: "760px", margin: "0 auto", padding: "2rem 1.5rem" }}>
-      <h1 style={{ fontSize: "2rem", marginBottom: "1.5rem" }}>Code Samples</h1>
+        <Typography
+          sx={{
+            color: "#980061",
+            fontSize: "2.75rem",
+          }}
+        >
+          Code Samples
+        </Typography>
 
-      <p style={{ marginBottom: "2rem", lineHeight: "1.6" }}>
+      <p style={{ marginBottom: "2rem", lineHeight: "1.6", fontSize: "1.5rem" }}>
         A small collection of examples that reflect how I approach engineering. I like
         building systems that are clear, reliable, and easy for other people to work
         with. Most of my work sits in backend services, data pipelines, and small UI
@@ -11,15 +20,25 @@ export default function CodeSamples() {
       </p>
 
       <section style={{ marginBottom: "3rem" }}>
-        <h2 style={{ fontSize: "1.4rem", marginBottom: "0.75rem" }}>
+        <Typography
+          sx={{
+            color: "#980061",
+            fontSize: "2rem",
+          }}
+        >
           Kafka Consumer for Financial Events (Java + Spring Boot)
-        </h2>
-        <p style={{ marginBottom: "1rem", lineHeight: "1.6" }}>
+        </Typography>
+
+        <p style={{ marginBottom: "1rem", lineHeight: "1.6", fontSize: "1.4rem" }}>
+            A Kafka consumer built with Java and Spring Boot that processes high‑volume financial events in real time. 
+            It validates incoming messages, applies idempotent business logic, and updates downstream accounting systems 
+            with predictable, fault‑tolerant behavior. Designed for clarity, auditability, and stable performance across 
+            distributed workflows.
         </p>
 
         <pre
           style={{
-            background: "#f7f7f7",
+            background: "#FFDBE9",
             padding: "1rem",
             borderRadius: "8px",
             overflowX: "auto",
@@ -66,7 +85,7 @@ export default function CodeSamples() {
         </pre>
         <pre
           style={{
-            background: "#f7f7f7",
+            background: "#FFDBE9",
             padding: "1rem",
             borderRadius: "8px",
             overflowX: "auto",
@@ -83,24 +102,29 @@ export default function CodeSamples() {
 }`}
         </pre>
 
-        <p style={{ marginTop: "0.75rem", fontStyle: "italic" }}>
+        <p style={{ marginTop: "0.75rem", fontStyle: "italic", fontSize: "1.25rem" }}>
           Highlights: Clear separation of concerns, predictable error handling for Kafka retries, and simple validation 
           logic that keeps the consumer focused on its core responsibility.
         </p>
       </section>
 
       <section style={{ marginBottom: "3rem" }}>
-        <h2 style={{ fontSize: "1.4rem", marginBottom: "0.75rem" }}>
+        <Typography
+          sx={{
+            color: "#980061",
+            fontSize: "2rem",
+          }}
+        >
           Bank Account Endpoint (Java + Spring Boot)
-        </h2>
-        <p style={{ marginBottom: "1rem", lineHeight: "1.6" }}>
+        </Typography>
+        <p style={{ marginBottom: "1rem", lineHeight: "1.6" , fontSize: "1.4rem"}}>
           This example shows how I typically structure financial‑workflow endpoints. It includes validation, tokenization, 
           safe persistence, and a clean response shape without exposing sensitive details.
         </p>
 
         <pre
           style={{
-            background: "#f7f7f7",
+            background: "#FFDBE9",
             padding: "1rem",
             borderRadius: "8px",
             overflowX: "auto",
@@ -160,16 +184,21 @@ public class BankAccountController {
 }`}
         </pre>
 
-        <p style={{ marginTop: "0.75rem", fontStyle: "italic" }}>
+        <p style={{ marginTop: "0.75rem", fontStyle: "italic", fontSize: "1.25rem" }}>
           Highlights: validation, tokenization, safe response shaping, and predictable API design.
         </p>
       </section>
 
       <section style={{ marginBottom: "3rem" }}>
-        <h2 style={{ fontSize: "1.4rem", marginBottom: "0.75rem" }}>
+        <Typography
+          sx={{
+            color: "#980061",
+            fontSize: "2rem",
+          }}
+        >
           Financial Analytics Pipeline (Pyspark on Databricks)
-        </h2>
-        <p style={{ marginBottom: "1rem", lineHeight: "1.6" }}>
+        </Typography>
+        <p style={{ marginBottom: "1rem", lineHeight: "1.6", fontSize: "1.4rem" }}>
           This example shows how I typically structured analytics pipelines in Databricks. It reads raw financial 
           transactions, applies SQL‑style transformations, and writes enriched data to a curated layer used by reporting 
           dashboards.
@@ -177,7 +206,7 @@ public class BankAccountController {
 
         <pre
           style={{
-            background: "#f7f7f7",
+            background: "#FFDBE9",
             padding: "1rem",
             borderRadius: "8px",
             overflowX: "auto",
@@ -230,22 +259,27 @@ enriched_df = (
 )`}
         </pre>
 
-        <p style={{ marginTop: "0.75rem", fontStyle: "italic" }}>
+        <p style={{ marginTop: "0.75rem", fontStyle: "italic", fontSize: "1.25rem" }}>
           Highlights: distributed processing, SQL‑style transformations, data validation, and curated‑layer design for analytics.
         </p>
       </section>
 
       <section style={{ marginBottom: "3rem" }}>
-        <h2 style={{ fontSize: "1.4rem", marginBottom: "0.75rem" }}>
+        <Typography
+          sx={{
+            color: "#980061",
+            fontSize: "2rem",
+          }}
+        >
           Le Minou Service Selector (React)
-        </h2>
-        <p style={{ marginBottom: "1rem", lineHeight: "1.6" }}>
+        </Typography>
+        <p style={{ marginBottom: "1rem", lineHeight: "1.6", fontSize: "1.4rem" }}>
           A small UI pattern from Le Minou that lets users choose a care option. It focuses on simple state, soft styling, and a calm, editorial feel.
         </p>
 
         <pre
           style={{
-            background: "#f7f7f7",
+            background: "#FFDBE9",
             padding: "1rem",
             borderRadius: "8px",
             overflowX: "auto",
@@ -295,7 +329,7 @@ export default function ServiceSelector() {
 }`}
         </pre>
 
-        <p style={{ marginTop: "0.75rem", fontStyle: "italic" }}>
+        <p style={{ marginTop: "0.75rem", fontStyle: "italic", fontSize: "1.25rem" }}>
           Highlights: Soft, editorial design; simple, predictable state management; and a focus on calm, intentional user experience.
         </p>
       </section>
