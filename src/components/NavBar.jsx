@@ -96,7 +96,7 @@ function NavBar() {
             sx={{
               textDecoration: "none",
               color: "#980061",
-              fontSize: "1.75rem",
+              fontSize: "1.25rem",
               fontWeight: 500,
               "&:hover": {
                 opacity: 0.8
