@@ -259,7 +259,7 @@ export default function ServiceSelector() {
 
   const services = [
     { id: "dropin", label: "Drop‑In Visit", price: "$22" },
-    { id: "overnight", label: "Overnight Stay", price: "$65" }
+    { id: "walk", label: "Dog Walk", price: "$35" }
   ];
 
   return (

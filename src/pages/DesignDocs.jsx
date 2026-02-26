@@ -126,7 +126,7 @@ export default function DesignDocs() {
         >
 {`┌────────────────────────┐
 │  Service Selector      │
-│ (Drop‑In / Overnight)  │
+│ (Drop‑In / Dog Walk)   │
 └──────────┬─────────────┘
            │
            ▼
