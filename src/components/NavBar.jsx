@@ -44,7 +44,7 @@ function NavBar() {
         <Box sx={{ display: "flex", gap: 3 }}>
           <Typography
             component="a"
-            href="resume"
+            href="/resume"
             sx={{
               textDecoration: "none",
               color: "#980061",
@@ -60,7 +60,7 @@ function NavBar() {
           {/* Add more buttons here */}
         <Typography
             component="a"
-            href="about"
+            href="/about"
             sx={{
               textDecoration: "none",
               color: "#980061",
@@ -76,7 +76,7 @@ function NavBar() {
 
         <Typography
             component="a"
-            href="code-samples"
+            href="/code-samples"
             sx={{
               textDecoration: "none",
               color: "#980061",
@@ -92,7 +92,24 @@ function NavBar() {
 
           <Typography
             component="a"
-            href="design-docs"
+            href="/design-docs"
+            sx={{
+              textDecoration: "none",
+              color: "#980061",
+              fontSize: "1.75rem",
+              fontWeight: 500,
+              "&:hover": {
+                opacity: 0.8
+              },
+              
+            }}
+          >
+            Design Docs
+          </Typography>
+
+          <Typography
+            component="a"
+            href="/case-studies"
             sx={{
               textDecoration: "none",
               color: "#980061",
@@ -103,7 +120,7 @@ function NavBar() {
               }
             }}
           >
-            Design Docs
+            Case Studies
           </Typography>
         </Box>
       </Toolbar>
