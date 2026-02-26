@@ -6,6 +6,7 @@ import Resume from "./pages/Resume";
 import About from "./pages/About";
 import Box from "@mui/material/Box";
 import CodeSamples from "./pages/CodeSamples";
+import DesignDocs from "./pages/DesignDocs";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/about" element={<About />} />
           <Route path="/code-samples" element={<CodeSamples />} />
+          <Route path="/design-docs" element={<DesignDocs />} />
         </Routes>
       </Box>
 

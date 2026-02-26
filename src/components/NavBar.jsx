@@ -89,6 +89,22 @@ function NavBar() {
           >
             Code Samples
           </Typography>
+
+          <Typography
+            component="a"
+            href="design-docs"
+            sx={{
+              textDecoration: "none",
+              color: "#980061",
+              fontSize: "1.25rem",
+              fontWeight: 500,
+              "&:hover": {
+                opacity: 0.8
+              }
+            }}
+          >
+            Design Docs
+          </Typography>
         </Box>
       </Toolbar>
     </AppBar>
