@@ -33,7 +33,7 @@ function NavBar() {
             }
           }}
         >
-          EEJ
+          EJ
         </Typography>
 
         {/* Navigation links */}
