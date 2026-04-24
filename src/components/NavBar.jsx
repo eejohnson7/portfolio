@@ -1,6 +1,5 @@
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
@@ -24,32 +23,27 @@ function NavBar() {
       >
         {/* Name as clickable brand */}
         <Typography
+          variant="h1"
           component="a"
           href="/"
           sx={{
             textDecoration: "none",
-            color: "#980061",
-            fontSize: "2.75rem",
-            fontWeight: 500,
-            fontFamily: "casual_sunday",
             "&:hover": {
               opacity: 0.8
             }
           }}
         >
-          Erin Elizabeth Johnson
+          EEJ
         </Typography>
 
         {/* Navigation links */}
         <Box sx={{ display: "flex", gap: 3 }}>
           <Typography
+            variant="h4"
             component="a"
             href="/resume"
             sx={{
               textDecoration: "none",
-              color: "#980061",
-              fontSize: "1.25rem",
-              fontWeight: 500,
               "&:hover": {
                 opacity: 0.8
               }
@@ -57,71 +51,63 @@ function NavBar() {
           >
             Resume
           </Typography>
-          {/* Add more buttons here */}
-        <Typography
-            component="a"
-            href="/about"
-            sx={{
-              textDecoration: "none",
-              color: "#980061",
-              fontSize: "1.25rem",
-              fontWeight: 500,
-              "&:hover": {
-                opacity: 0.8
-              }
-            }}
-          >
-            About
-          </Typography>
-
-        <Typography
-            component="a"
-            href="/code-samples"
-            sx={{
-              textDecoration: "none",
-              color: "#980061",
-              fontSize: "1.25rem",
-              fontWeight: 500,
-              "&:hover": {
-                opacity: 0.8
-              }
-            }}
-          >
-            Code Samples
-          </Typography>
 
           <Typography
-            component="a"
-            href="/design-docs"
-            sx={{
-              textDecoration: "none",
-              color: "#980061",
-              fontSize: "1.25rem",
-              fontWeight: 500,
-              "&:hover": {
-                opacity: 0.8
-              },
-              
-            }}
-          >
-            Design Docs
-          </Typography>
+              variant="h4"
+              component="a"
+              href="/about"
+              sx={{
+                textDecoration: "none",
+                "&:hover": {
+                  opacity: 0.8
+                }
+              }}
+            >
+              About
+            </Typography>
 
           <Typography
-            component="a"
-            href="/case-studies"
-            sx={{
-              textDecoration: "none",
-              color: "#980061",
-              fontSize: "1.25rem",
-              fontWeight: 500,
-              "&:hover": {
-                opacity: 0.8
-              }
-            }}
-          >
-            Case Studies
-          </Typography>
+              variant="h4"
+              component="a"
+              href="/code-samples"
+              sx={{
+                textDecoration: "none",
+                "&:hover": {
+                  opacity: 0.8
+                }
+              }}
+            >
+              Code Samples
+            </Typography>
+
+            <Typography
+              variant="h4"
+              component="a"
+              href="/design-docs"
+              sx={{
+                textDecoration: "none",
+                "&:hover": {
+                  opacity: 0.8
+                },
+                
+              }}
+            >
+              Design Docs
+            </Typography>
+
+            <Typography
+              variant="h4"
+              component="a"
+              href="/case-studies"
+              sx={{
+                textDecoration: "none",
+                "&:hover": {
+                  opacity: 0.8
+                }
+              }}
+            >
+              Case Studies
+            </Typography>
         </Box>
       </Toolbar>
     </AppBar>
