@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
-import profilePic from "/public/images/profile_pic.png";
+import profilePic from "../images/profile_pic.png";
 
 function Home(){
     return (
