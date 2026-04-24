@@ -66,24 +66,10 @@ function NavBar() {
               About
             </Typography>
 
-          <Typography
-              variant="h4"
-              component="a"
-              href="/code-samples"
-              sx={{
-                textDecoration: "none",
-                "&:hover": {
-                  opacity: 0.8
-                }
-              }}
-            >
-              Code Samples
-            </Typography>
-
             <Typography
               variant="h4"
               component="a"
-              href="/design-docs"
+              href="/projects"
               sx={{
                 textDecoration: "none",
                 "&:hover": {
@@ -92,22 +78,8 @@ function NavBar() {
                 
               }}
             >
-              Design Docs
+              Projects
             </Typography>
-
-{/*             <Typography
-              variant="h4"
-              component="a"
-              href="/case-studies"
-              sx={{
-                textDecoration: "none",
-                "&:hover": {
-                  opacity: 0.8
-                }
-              }}
-            >
-              Case Studies
-            </Typography> */}
         </Box>
       </Toolbar>
     </AppBar>
