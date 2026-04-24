@@ -95,7 +95,7 @@ function NavBar() {
               Design Docs
             </Typography>
 
-            <Typography
+{/*             <Typography
               variant="h4"
               component="a"
               href="/case-studies"
@@ -107,7 +107,7 @@ function NavBar() {
               }}
             >
               Case Studies
-            </Typography>
+            </Typography> */}
         </Box>
       </Toolbar>
     </AppBar>
