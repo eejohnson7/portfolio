@@ -1,13 +1,21 @@
 import { useParams } from "react-router-dom";
-import { projects } from "../../data/projectsData";
 import { Typography, Box } from "@mui/material";
 import CodeBox from "../../components/CodeBox";
+import useProject from "../../hooks/useProjects";
 
 export default function ProjectDetail() {
   const { id } = useParams();
-  const project = projects.find((p) => p.id === id);
+  const { project, loading, error } = useProject(id);
 
-  if (!project) {
+  if (loading) {
+    return (
+      <Box sx={{ maxWidth: "760px", margin: "0 auto", padding: "2rem 1.5rem" }}>
+        <Typography>Loading project…</Typography>
+      </Box>
+    );
+  }
+
+  if (error || !project) {
     return (
       <Box sx={{ maxWidth: "760px", margin: "0 auto", padding: "2rem 1.5rem" }}>
         <Typography variant="h2">Project Not Found</Typography>
@@ -34,92 +42,80 @@ export default function ProjectDetail() {
       {/* Long Description */}
       <CodeBox>
         <Typography sx={{ fontSize: "1.1rem", lineHeight: 1.7 }}>
-          {project.details?.longDescription || project.description}
+          {project.long_description || project.description}
         </Typography>
       </CodeBox>
 
       {/* Key Contributions */}
-        <Box sx={{ mt: "2rem" }}>
+      <Box sx={{ mt: "2rem" }}>
         <Typography variant="h3" sx={{ mb: "0.75rem" }}>
-            Key Contributions
+          Key Contributions
         </Typography>
 
         {project.bullets.map((b, i) => (
-            <Box key={i} sx={{ display: "flex", mb: "0.5rem" }}>
+          <Box key={i} sx={{ display: "flex", mb: "0.5rem" }}>
             <Typography sx={{ mr: "0.5rem", color: "#980061" }}>•</Typography>
             <Typography sx={{ lineHeight: 1.6 }}>{b}</Typography>
-            </Box>
+          </Box>
         ))}
-        </Box>
-        
-        {/* Diagrams */}
-        {project.details?.diagrams?.length > 0 && (
+      </Box>
+
+      {/* Diagrams */}
+      {project.diagrams.length > 0 && (
         <Box sx={{ mt: "2rem" }}>
-            <Typography variant="h3" sx={{ mb: "0.75rem" }}>
+          <Typography variant="h3" sx={{ mb: "0.75rem" }}>
             Architecture Diagrams
-            </Typography>
+          </Typography>
 
-            {project.details.diagrams.map((d, i) => (
+          {project.diagrams.map((d, i) => (
             <Box key={i} sx={{ mb: "2rem" }}>
-                
-                {/* Title */}
-                {d.title && (
+              {d.title && (
                 <Typography variant="h4" sx={{ mb: "0.5rem" }}>
-                    {d.title}
+                  {d.title}
                 </Typography>
-                )}
+              )}
 
-                {/* Description */}
-                {d.description && (
+              {d.description && (
                 <Typography sx={{ mb: "0.75rem", fontSize: "1rem", opacity: 0.85 }}>
-                    {d.description}
+                  {d.description}
                 </Typography>
-                )}
+              )}
 
-                {/* Diagram */}
-                <CodeBox code>
-                {d.diagram}
-                </CodeBox>
+              <CodeBox code>{d.diagram}</CodeBox>
             </Box>
-            ))}
+          ))}
         </Box>
-        )}
+      )}
 
-        {/* Code Samples */}
-        {project.details?.codeSamples?.length > 0 && (
+      {/* Code Samples */}
+      {project.codeSamples.length > 0 && (
         <Box sx={{ mt: "2rem" }}>
-            <Typography variant="h3" sx={{ mb: "0.75rem" }}>
+          <Typography variant="h3" sx={{ mb: "0.75rem" }}>
             Code Samples
-            </Typography>
+          </Typography>
 
-            {project.details.codeSamples.map((snippet, i) => (
+          {project.codeSamples.map((snippet, i) => (
             <Box key={i} sx={{ mb: "2rem" }}>
-                
-                {/* Title */}
-                {snippet.title && (
+              {snippet.title && (
                 <Typography variant="h4" sx={{ mb: "0.5rem" }}>
-                    {snippet.title}
+                  {snippet.title}
                 </Typography>
-                )}
+              )}
 
-                {/* Description */}
-                {snippet.description && (
+              {snippet.description && (
                 <Typography sx={{ mb: "0.75rem", fontSize: "1rem", opacity: 0.85 }}>
-                    {snippet.description}
+                  {snippet.description}
                 </Typography>
-                )}
+              )}
 
-                {/* Code */}
-                <CodeBox code>
-                {snippet.code}
-                </CodeBox>
+              <CodeBox code>{snippet.code}</CodeBox>
             </Box>
-            ))}
+          ))}
         </Box>
-        )}
+      )}
 
       {/* Architecture Notes */}
-      {project.details?.architectureNotes && (
+      {project.architecture_notes && (
         <Box sx={{ mt: "2rem" }}>
           <Typography variant="h3" sx={{ mb: "0.75rem" }}>
             Architecture Notes
@@ -127,7 +123,7 @@ export default function ProjectDetail() {
 
           <CodeBox>
             <Typography sx={{ fontSize: "1.1rem", lineHeight: 1.7 }}>
-              {project.details.architectureNotes}
+              {project.architecture_notes}
             </Typography>
           </CodeBox>
         </Box>

@@ -1,16 +1,12 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
-import PinkBox from "../components/CodeBox";
-
-import {
-  aboutIntro,
-  aboutPath,
-  aboutValues,
-  aboutLife
-} from "../data/aboutData";
+import CodeBox from "../components/CodeBox";
+import useAboutPage from "../hooks/useAboutPage";
 
 function About() {
+  const { about, loading, error } = useAboutPage();
+
   return (
     <Box
       sx={{
@@ -23,43 +19,62 @@ function About() {
         gap: 4
       }}
     >
-      {/* Intro */}
-      <Box>
-        <Typography variant="h2">
-          {aboutIntro.title}
+      {/* Loading */}
+      {loading && (
+        <Typography sx={{ fontSize: "1.2rem" }}>
+          Loading…
         </Typography>
-        <Typography>{aboutIntro.text}</Typography>
-      </Box>
+      )}
 
-      <Divider />
+      {/* Error */}
+      {error && (
+        <Typography sx={{ color: "red" }}>
+          Error loading About page: {error}
+        </Typography>
+      )}
 
-      {/* My Path */}
-      <Box>
-        <Typography variant="h3">{aboutPath.title}</Typography>
-        <PinkBox>
-          {aboutPath.text}
-        </PinkBox>
-      </Box>
+      {/* Content */}
+      {!loading && !error && about && (
+        <>
+          {/* Intro */}
+          <Box>
+            <Typography variant="h2">
+              {about.intro_title}
+            </Typography>
+            <Typography>{about.intro_text}</Typography>
+          </Box>
 
-      <Divider />
+          <Divider />
 
-      {/* What I Care About */}
-      <Box>
-        <Typography variant="h3">{aboutValues.title}</Typography>
-        <PinkBox>
-          {aboutValues.text}
-        </PinkBox>
-      </Box>
+          {/* My Path */}
+          <Box>
+            <Typography variant="h3">{about.path_title}</Typography>
+            <CodeBox>
+              {about.path_text}
+            </CodeBox>
+          </Box>
 
-      <Divider />
+          <Divider />
 
-      {/* Outside of Work */}
-      <Box>
-        <Typography variant="h3">{aboutLife.title}</Typography>
-        <PinkBox>
-          {aboutLife.text}
-        </PinkBox>
-      </Box>
+          {/* What I Care About */}
+          <Box>
+            <Typography variant="h3">{about.values_title}</Typography>
+            <CodeBox>
+              {about.values_text}
+            </CodeBox>
+          </Box>
+
+          <Divider />
+
+          {/* Outside of Work */}
+          <Box>
+            <Typography variant="h3">{about.life_title}</Typography>
+            <CodeBox>
+              {about.life_text}
+            </CodeBox>
+          </Box>
+        </>
+      )}
     </Box>
   );
 }
