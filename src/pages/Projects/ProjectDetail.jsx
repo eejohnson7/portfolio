@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Typography, Box } from "@mui/material";
 import CodeBox from "../../components/CodeBox";
-import useProject from "../../hooks/useProjects";
+import useProject from "../../hooks/useProject";
 
 export default function ProjectDetail() {
   const { id } = useParams();
