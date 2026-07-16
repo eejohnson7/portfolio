@@ -2,8 +2,6 @@ import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
 
 export default function BottomNav() {
   return (
@@ -39,24 +37,6 @@ export default function BottomNav() {
         sx={{ color: "#980061" }}
       >
         <LinkedInIcon sx={{ fontSize: 32 }} />
-      </IconButton>
-
-      <IconButton
-        href="https://www.facebook.com/eejohnson7"
-        target="_blank"
-        rel="noopener noreferrer"
-        sx={{ color: "#980061" }}
-      >
-        <FacebookIcon sx={{ fontSize: 32 }} />
-      </IconButton>
-
-      <IconButton
-        href="https://www.instagram.com/ee.johnson"
-        target="_blank"
-        rel="noopener noreferrer"
-        sx={{ color: "#980061" }}
-      >
-        <InstagramIcon sx={{ fontSize: 32 }} />
       </IconButton>
     </Box>
   );
