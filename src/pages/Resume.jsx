@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
-import PDFLinks from "../components/PDFLinks";
+import PDFLink from "../components/PDFLink";
 import CodeBox from "../components/CodeBox";
 import useResume from "../hooks/useResume";
 
@@ -26,7 +26,7 @@ function Resume() {
         margin: "0 auto"
       }}
     >
-      <PDFLinks />
+      <PDFLink />
 
       {/* Loading */}
       {loading && (
