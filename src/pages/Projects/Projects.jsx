@@ -14,7 +14,7 @@ export default function Projects() {
       </Typography>
 
       <Typography sx={{ mb: "2rem" }}>
-        A selection of backend and data‑focused engineering projects that highlight how I approach 
+        A selection of engineering projects that highlight how I approach 
         reliability, clarity, and system design in financial workflows.
       </Typography>
 
@@ -50,13 +50,7 @@ export default function Projects() {
               to={`/projects/${proj.id}`} 
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <CodeBox
-                sx={{
-                  height: "100%",
-                  padding: "1rem",
-                  fontSize: "0.85rem"
-                }}
-              >
+              <CodeBox link>
                 <Typography variant="h3" sx={{ mb: "0.5rem", fontSize: "1.25rem" }}>
                   {proj.title}
                 </Typography>
