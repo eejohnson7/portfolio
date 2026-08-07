@@ -3,6 +3,7 @@ import { Typography, Box } from "@mui/material";
 import CodeBox from "../../components/CodeBox";
 import SoftAccordion from "../../components/SoftAccordion";
 import SoftTabs from "../../components/SoftTabs";
+import MermaidDiagram from "../../components/MermaidDiagram";
 import useProject from "../../hooks/useProject";
 import { useState } from "react";
 
@@ -86,7 +87,7 @@ export default function ProjectDetail() {
                   {d.description}
                 </Typography>
               )}
-              <CodeBox code>{d.diagram}</CodeBox>
+              <MermaidDiagram chart={d.diagram} />
             </Box>
           ) : null
         )}
