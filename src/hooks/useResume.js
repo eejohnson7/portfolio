@@ -66,9 +66,14 @@ export default function useResume() {
           .order("sort_order");
 
         const groupedExperience = roles.map((role) => ({
+          id: role.id,
           title: role.title,
           company: role.company,
+          location: role.location_type,
           dates: role.dates_text,
+          category: role.category,
+          badgeLabel: role.badge_label,
+          isPrimary: role.is_primary,
           bullets: bullets
             .filter((b) => b.role_id === role.id)
             .map((b) => b.bullet_text)

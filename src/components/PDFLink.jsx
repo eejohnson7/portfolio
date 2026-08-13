@@ -1,23 +1,32 @@
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
 
 export default function PDFLink() {
-    const resumeLink = import.meta.env.VITE_RESUME_URL;
+  const resumeLink = import.meta.env.VITE_RESUME_URL;
 
-    return (
-        <Box sx={{ display: "flex", justifyContent: "flex-end", gap: 3 }}>
-            <Typography
-            component="a"
-            href={resumeLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{
-                textDecoration: "none",
-                "&:hover": { opacity: 0.8 }
-            }}
-            >
-            Download PDF Here
-            </Typography>
-      </Box>
-    );
+  return (
+    <Button
+      href={resumeLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      endIcon={<ArrowOutwardRoundedIcon />}
+      aria-label="Open résumé PDF in a new tab"
+      sx={{
+        alignSelf: { xs: "flex-start", sm: "auto" },
+        border: "1px solid rgba(152, 0, 97, 0.28)",
+        borderRadius: "999px",
+        color: "var(--plum)",
+        fontWeight: 800,
+        px: 2.25,
+        py: 1,
+        textTransform: "none",
+        "&:hover": {
+          bgcolor: "rgba(255, 255, 255, 0.5)",
+          borderColor: "var(--plum)"
+        }
+      }}
+    >
+      Download PDF
+    </Button>
+  );
 }
