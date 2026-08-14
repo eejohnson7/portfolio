@@ -15,9 +15,9 @@ export default function BottomNav() {
         justifyContent: "center",
         gap: 4,
         padding: "0.75rem 0",
-        backgroundColor: "rgba(255, 236, 242, 0.8)", // soft blush with transparency
-        backdropFilter: "blur(6px)",
-        borderTop: "1px solid rgba(152, 0, 97, 0.2)", // subtle plum line
+        backgroundColor: "rgba(255, 236, 242, 0.82)",
+        backdropFilter: "blur(10px)",
+        borderTop: "1px solid rgba(152, 0, 97, 0.14)",
         zIndex: 1000
       }}
     >
@@ -25,7 +25,8 @@ export default function BottomNav() {
         href="https://github.com/eejohnson7"
         target="_blank"
         rel="noopener noreferrer"
-        sx={{ color: "#980061" }}
+        aria-label="Erin Johnson on GitHub (opens in a new tab)"
+        sx={{ color: "var(--plum)" }}
       >
         <GitHubIcon sx={{ fontSize: 32 }} />
       </IconButton>
@@ -34,7 +35,8 @@ export default function BottomNav() {
         href="https://www.linkedin.com/in/erinejohnson77"
         target="_blank"
         rel="noopener noreferrer"
-        sx={{ color: "#980061" }}
+        aria-label="Erin Johnson on LinkedIn (opens in a new tab)"
+        sx={{ color: "var(--plum)" }}
       >
         <LinkedInIcon sx={{ fontSize: 32 }} />
       </IconButton>

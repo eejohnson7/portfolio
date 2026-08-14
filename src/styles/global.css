@@ -1,17 +1,49 @@
-@font-face {
-  font-family: "casual_sunday";
-  src: url("../assets/fonts/casual_sunday.otf") format("woff2");
-}
-
 :root {
-  --font-serif: "casual_sunday", serif;
+  --blush: #ffecf2;
+  --soft-pink: #ffdbe9;
+  --plum: #980061;
+  --deep-plum: #2a0017;
+  --ink: #3b1b2d;
+  --muted-ink: #745565;
 }
 
+* {
+  box-sizing: border-box;
+}
 
 body {
-  background-color: #FFECF2;
+  background:
+    radial-gradient(circle at 8% 5%, rgba(255, 255, 255, 0.82), transparent 29rem),
+    radial-gradient(circle at 92% 18%, rgba(255, 207, 225, 0.4), transparent 25rem),
+    var(--blush);
+  color: var(--ink);
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font-family: var(--font-serif);
+  font-family: "Nunito Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(152, 0, 97, 0.18);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(152, 0, 97, 0.34);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -1,16 +1,28 @@
-# React + Vite
+# Erin Johnson Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React and Vite portfolio backed by Supabase content.
 
-Currently, two official plugins are available:
+## Local setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Install dependencies with `npm install`.
+2. Copy `.env.example` to `.env` and provide the required values.
+3. Start the app with `npm run dev`.
 
-## React Compiler
+Required environment variables:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_PUBLISHABLE_KEY`
+- `VITE_RESUME_URL`
 
-## Expanding the ESLint configuration
+## Database and deployment
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Apply pending files in `supabase/migrations` before deploying frontend code that reads their new tables or columns. The homepage content migration creates public, read-only content tables with row-level security and explicit `anon`/`authenticated` select grants.
+
+Before merging or deploying, run:
+
+```sh
+npm run lint
+npm run build
+```
+
+There is currently no automated test script in `package.json`, so the main routes should also receive a local browser smoke test.
