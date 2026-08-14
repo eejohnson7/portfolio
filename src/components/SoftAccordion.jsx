@@ -9,33 +9,43 @@ export default function SoftAccordion({ title, children, defaultExpanded = false
       square
       defaultExpanded={defaultExpanded}
       sx={{
-        background: "transparent",
-        border: "none",
+        bgcolor: "rgba(255, 255, 255, 0.58)",
+        border: "1px solid rgba(152, 0, 97, 0.12)",
+        borderRadius: "18px !important",
+        overflow: "hidden",
         "&:before": { display: "none" },
-        mb: 3
+        "&.Mui-expanded": { margin: 0 },
+        mb: 0
       }}
     >
       <AccordionSummary
         expandIcon={
           <ExpandMoreIcon
             sx={{
-              color: "#980061",
+              color: "var(--plum)",
               fontSize: "1.75rem",
               transition: "color 0.2s ease"
             }}
           />
         }
         sx={{
-          px: 0,
+          minHeight: 68,
+          px: { xs: 2.25, sm: 2.75 },
+          "&.Mui-expanded": { minHeight: 68 },
+          "&:focus-visible": {
+            outline: "3px solid rgba(152, 0, 97, 0.3)",
+            outlineOffset: "-3px"
+          },
           "& .MuiAccordionSummary-content": {
-            margin: 0,
-            padding: 0
+            my: 1.5
           }
         }}
       >
         <Typography
           variant="h3"
           sx={{
+            color: "var(--ink)",
+            fontSize: { xs: "1.2rem", sm: "1.35rem" },
             lineHeight: 1.3,
             display: "flex",
             alignItems: "center",
@@ -45,7 +55,14 @@ export default function SoftAccordion({ title, children, defaultExpanded = false
         </Typography>
       </AccordionSummary>
 
-      <AccordionDetails sx={{ px: 0, pt: 1 }}>
+      <AccordionDetails
+        sx={{
+          borderTop: "1px solid rgba(152, 0, 97, 0.1)",
+          px: { xs: 2.25, sm: 2.75 },
+          pt: 2.5,
+          pb: { xs: 2.5, sm: 3 }
+        }}
+      >
         {children}
       </AccordionDetails>
     </Accordion>
