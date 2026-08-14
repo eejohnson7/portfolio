@@ -1,4 +1,4 @@
-import profilePic from "../images/profile_pic.png";
+import profilePic from "../images/profile_pic.jpg";
 import Box from "@mui/material/Box";
 
 export default function ProfilePic() {
@@ -23,6 +23,8 @@ export default function ProfilePic() {
         component="img"
         src={profilePic}
         alt="Erin Johnson"
+        decoding="async"
+        fetchPriority="high"
         sx={{
           width: "100%",
           height: "100%",

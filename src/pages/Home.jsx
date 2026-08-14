@@ -94,7 +94,7 @@ function Home() {
         component="main"
         sx={{ minHeight: "70vh", display: "grid", placeItems: "center" }}
       >
-        <Box sx={{ textAlign: "center" }}>
+        <Box role="status" aria-live="polite" sx={{ textAlign: "center" }}>
           <CircularProgress size={30} sx={{ color: "var(--plum)" }} />
           <Typography sx={{ mt: 1.5, color: "var(--muted-ink)" }}>
             Loading portfolio…
@@ -242,12 +242,22 @@ function Home() {
           </Box>
 
           <Box
+            component="ul"
             aria-label="Professional focus"
-            sx={{ display: "flex", flexWrap: "wrap", gap: 1, mt: 4 }}
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 1,
+              listStyle: "none",
+              m: 0,
+              mt: 4,
+              p: 0
+            }}
           >
             {home.focus_items.map((item) => (
               <Chip
                 key={item}
+                component="li"
                 label={item}
                 size="small"
                 sx={{

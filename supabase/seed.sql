@@ -1,0 +1,2 @@
+-- Local development seed data is intentionally empty for now.
+-- Add representative, non-sensitive fixtures here when local content editing is introduced.

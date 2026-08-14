@@ -74,8 +74,9 @@ export default function useHomePage() {
           supabase
             .from("home_page")
             .select(HOME_PAGE_FIELDS)
+            .order("id")
             .limit(1)
-            .single(),
+            .maybeSingle(),
           supabase
             .from("home_capabilities")
             .select("id, title, description, detail, icon_key, sort_order")
@@ -120,19 +121,27 @@ export default function useHomePage() {
 
         if (firstError) throw firstError;
 
-        const projects = projectsResult.data.map((project) => ({
+        if (!homeResult.data) {
+          throw new Error("Homepage content is not configured.");
+        }
+
+        const projectStackItems = stacksResult.data ?? [];
+        const toolboxCategories = categoriesResult.data ?? [];
+        const toolboxItems = itemsResult.data ?? [];
+
+        const projects = (projectsResult.data ?? []).map((project) => ({
           ...project,
           description: project.homepage_description,
-          stack: stacksResult.data
+          stack: projectStackItems
             .filter((item) => item.project_id === project.id)
             .map((item) => item.tech_name)
         }));
 
-        const skillGroups = categoriesResult.data
+        const skillGroups = toolboxCategories
           .filter((category) => HOMEPAGE_SKILL_CATEGORIES.has(category.category_name))
           .map((category) => ({
             category: category.category_name,
-            items: itemsResult.data
+            items: toolboxItems
               .filter((item) => item.category_id === category.id)
               .map((item) => item.item_name)
           }))
@@ -140,10 +149,10 @@ export default function useHomePage() {
 
         if (!cancelled) {
           setHome(homeResult.data);
-          setCapabilities(capabilitiesResult.data);
+          setCapabilities(capabilitiesResult.data ?? []);
           setFeaturedProjects(projects);
           setSkills(skillGroups);
-          setProfessionalRange(professionalRangeResult.data);
+          setProfessionalRange(professionalRangeResult.data ?? []);
         }
       } catch (err) {
         console.error(err);

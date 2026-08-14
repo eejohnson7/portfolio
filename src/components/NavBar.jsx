@@ -2,7 +2,7 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Link as RouterLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -30,8 +30,9 @@ function NavBar() {
       >
         <Typography
           variant="h1"
-          component={RouterLink}
+          component={NavLink}
           to="/"
+          end
           aria-label="Erin Johnson home"
           sx={{
             color: "var(--plum)",
@@ -52,7 +53,7 @@ function NavBar() {
         >
           <Typography
             variant="h4"
-            component={RouterLink}
+            component={NavLink}
             to="/resume"
             sx={{
               color: "var(--plum)",
@@ -68,7 +69,7 @@ function NavBar() {
 
           <Typography
             variant="h4"
-            component={RouterLink}
+            component={NavLink}
             to="/about"
             sx={{
               color: "var(--plum)",
@@ -84,7 +85,7 @@ function NavBar() {
 
           <Typography
             variant="h4"
-            component={RouterLink}
+            component={NavLink}
             to="/projects"
             sx={{
               color: "var(--plum)",
